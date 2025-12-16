@@ -1,8 +1,9 @@
-import { PrismaClient } from "@prisma/client/extension";
+import { defineConfig, env } from "prisma/config";
 
-export const prisma = new PrismaClient({
-  adapter: {
-    provider: "postgresql",
-    url: process.env.DATABASE_URL!,
+export default defineConfig({
+  schema: "prisma/schema.prisma",
+
+  datasource: {
+    url: env("DATABASE_URL"),
   },
 });
