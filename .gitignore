@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.seed
+*.sqlite
+docker-compose.override.yml
+**/Dockerfile.dev
+**/docker-compose.override.yml
+**/docker-compose.override.*.yml
+**/docker-compose.*.yml
+
+# Prisma
+prisma/migrations/**/*.sql
+prisma/dev.db
+prisma/.env
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Build output
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Misc
+*.tgz
+.env.local
+.env.test
