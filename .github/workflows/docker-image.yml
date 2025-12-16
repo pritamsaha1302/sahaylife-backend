@@ -35,10 +35,9 @@ jobs:
 
  
 
-      - name: Run Prisma migrate deploy
-        run: |
-          docker run --rm \
-            -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
-            -v ${{ github.workspace }}/prisma:/app/prisma \
-            node:20 \
-            sh -c "cd /app/prisma && npm install prisma @prisma/client && npx prisma migrate deploy"
+      - name: Run Prisma migrate
+  run: |
+    docker run --rm \
+      -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
+      -v ${{ github.workspace }}/prisma:/app/prisma \
+      node:20 sh -c "cd /app/prisma && npm install prisma @prisma/client && npx prisma migrate deploy"
